@@ -1,6 +1,6 @@
 
 <!DOCTYPE HTML>
-<html lang="ja" >
+<html lang="en" >
     <head>
         <meta charset="UTF-8">
         <title>ailia DX Insight</title>
@@ -66,7 +66,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="検索ワードを入力" />
+    <input type="text" placeholder="Type to search" />
 </div>
 
             
@@ -370,7 +370,7 @@
                 <a href="EditImage.html">
             
                     
-                    <img src='img_icons/palette.png'>Edit Images
+                    <img src='img_icons/palette.png'>Edit Generated Images
             
                 </a>
             
@@ -806,7 +806,7 @@
 
     <li>
         <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
-            HonKitで公開 
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -871,7 +871,7 @@ Developed utilizing a new knowledge distillation method called TAID (Time Adapti
 It is lightweight enough to operate on smartphones, enabling operation in resource-constrained environments.</p>
 <p><br></p>
 <h3 id="lmstudio-communitygemma-2-9b-it-gguf-ram-usage-232gb-to-915gb">lmstudio-community/gemma-2-9b-it-GGUF (RAM usage 2.32GB to 9.15GB)</h3>
-<p>bartowski/gemma-2-2b-it-GGUF (RAM usage 1.79 to 3.05GB)</p>
+<h3 id="bartowskigemma-2-2b-it-gguf-ram-usage-179-to-305gb">bartowski/gemma-2-2b-it-GGUF (RAM usage 1.79 to 3.05GB)</h3>
 <p>Features:
 Built using the same architecture as Google’s cutting-edge AI model, Gemini, Gemma2 delivers high performance despite being lightweight.
 The 27 billion parameter model, in particular, achieves top performance in its size class, rivaling models more than twice the size, while the 9 billion parameter model also shows excellent performance surpassing other open models of the same size.
@@ -962,10 +962,34 @@ The 27 billion parameter model achieves top performance in its size class, rival
 Command-R is an LLM created by CohereForAI, containing 35B (35 billion) parameters.
 This model excels at generating or summarizing text, or answering questions based on large amounts of information.</p>
 <p><br></p>
+<h3 id="pmyslc4ai-command-r-plus-gguf（ram-usage-8～21271gb）">pmysl/c4ai-command-r-plus-GGUF（RAM usage 8～212.71GB）</h3>
+<p>Features:
+Command R+ is an enhanced version of Command R, an LLM with 104B (104 billion) parameters.
+This model is designed to deliver excellent performance for enterprises,
+and is open source and available for anyone to use, yet it achieves performance approaching GPT-4 Turbo.
+It also supports long context sentences up to 128K.</p>
+<p>(Additional Information) Regarding the use of command-r-v01/Command R Plus:
+command-r-v01/Command R Plus is an LLM that allows for the modification and distribution of models for non-commercial use.
+Please note that for commercial (business) use, you will need to use the provider&apos;s paid API service.
+You can obtain the paid API from the website on the right (<a href="https://cohere.com/command" target="_blank">https://cohere.com/command</a>)</p>
+<p><br></p>
+<h3 id="qwenqwen2-72b-instruct-gguf（ram-usage-8～14898gb）">Qwen/Qwen2-72B-Instruct-GGUF（RAM usage 8～148.98GB）</h3>
+<p>Features:
+This is an LLM provided by Alibaba Cloud.
+Utilizing training data in 27 languages ​​in addition to English and Chinese, it has demonstrated high performance in benchmarks such as natural language understanding, knowledge acquisition, coding, mathematics, and multilingual support.
+The 7B and 72B models support long-form contexts of up to 128K tokens.</p>
+<p><br></p>
+<h3 id="mmngallama-31-70b-instruct-gguf（ram-usage-766～907gb）">mmnga/Llama-3.1-70B-Instruct-gguf（RAM usage 7.66～9.07GB）</h3>
+<p>Features:
+This is Meta&apos;s most advanced and performant LLM to date.
+With a 128K context length, cutting-edge tooling, and enhanced reasoning capabilities, Llama 3.1 supports advanced use cases such as long-text summarization,
+multilingual conversational agents, and coding assistance.</p>
+<p><br></p>
 <h2 id="supplement-about-our-recommended-llms">Supplement about our recommended LLMs</h2>
-<p>When searching for recommended LLMs on LM Studio, many models are expected to appear.
-We recommend using models with a 4-bit quantization that offer excellent balance between size and performance.
-Specifically, models with the notation Q4_K_M or similar quantization.</p>
+<p>When searching for recommended LLMs on LM Studio, many models are expected to appear.<br>
+We recommend using models with a 4-bit quantization that offer excellent balance between size and performance.<br>
+Specifically, models with the notation Q4_K_M or similar quantization.<br>
+<img src="img/CustomLLM_15.png" alt="CustomLLM_15"><br></p>
 <p><br></p>
 <h2 id="when-running-lm-studio-on-a-linux-server">When Running LM Studio on a Linux Server</h2>
 <p>If you encounter the following error when trying to connect from ailia DX insight while running LM Studio on a Linux server, it might be due to the server&apos;s firewall settings prohibiting access to the port.<br>
@@ -1019,7 +1043,7 @@ Please allow access to the port with the command<br>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"<img src='img_icons/tune.png'>Our Recommended LLM","level":"5.1.1.5","depth":3,"next":{"title":"<img src='img_icons/book_4_spark.png'>Improve Response Accuracy with RAG","level":"5.1.2","depth":2,"path":"RAG.md","ref":"RAG.md","articles":[]},"previous":{"title":"<img src='img_icons/tune.png'>Build Custom LLM with FastChat","level":"5.1.1.4","depth":3,"path":"CustomLLM_FastChat.md","ref":"CustomLLM_FastChat.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","hide-published-with","custom-favicon"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"img/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ailia DX Insight","language":"ja","gitbook":"*"},"file":{"path":"CustomLLM_Recomend.md","mtime":"2025-03-14T08:48:25.873Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2025-11-13T03:46:50.884Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"<img src='img_icons/tune.png'>Our Recommended LLM","level":"5.1.1.5","depth":3,"next":{"title":"<img src='img_icons/book_4_spark.png'>Improve Response Accuracy with RAG","level":"5.1.2","depth":2,"path":"RAG.md","ref":"RAG.md","articles":[]},"previous":{"title":"<img src='img_icons/tune.png'>Build Custom LLM with FastChat","level":"5.1.1.4","depth":3,"path":"CustomLLM_FastChat.md","ref":"CustomLLM_FastChat.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","hide-published-with","custom-favicon"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"img/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ailia DX Insight","language":"en","gitbook":"*"},"file":{"path":"CustomLLM_Recomend.md","mtime":"2025-12-02T11:12:02.206Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2025-12-03T11:13:46.382Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
