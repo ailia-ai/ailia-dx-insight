@@ -123,7 +123,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="v1_5update.html">
+        <li class="chapter " data-level="1.4" data-path="v1_5_1update.html">
+
+                <a href="v1_5_1update.html">
+
+
+                    <img src='img_icons/newspaper.png'>v1.5.1 release note
+
+                </a>
+
+
+
+        </li>
+
+        <li class="chapter " data-level="1.5" data-path="v1_5update.html">
             
                 <a href="v1_5update.html">
             
@@ -136,7 +149,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="v1_4update.html">
+        <li class="chapter " data-level="1.6" data-path="v1_4update.html">
             
                 <a href="v1_4update.html">
             
@@ -149,7 +162,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="v1_3update.html">
+        <li class="chapter " data-level="1.7" data-path="v1_3update.html">
             
                 <a href="v1_3update.html">
             
@@ -162,7 +175,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="v1_2update.html">
+        <li class="chapter " data-level="1.8" data-path="v1_2update.html">
             
                 <a href="v1_2update.html">
             
@@ -175,7 +188,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="v1_1update.html">
+        <li class="chapter " data-level="1.9" data-path="v1_1update.html">
             
                 <a href="v1_1update.html">
             
@@ -872,9 +885,10 @@
                                 
                                 <h1 id="proxy-settings">Proxy Settings</h1>
 <p>This page explains how to configure ailia DX Insight when using it in a proxy environment.<br>
-Note that in ailia DX Insight 1.5.0, the proxy cannot be enabled via environment variables (such as HTTP_PROXY). Please enable the proxy from the OS settings.</p>
+Starting with ailia DX Insight 1.5.1, you can configure the proxy using the <code>http_proxy</code> / <code>https_proxy</code> environment variables in addition to the OS settings.<br>
+These environment variables are not supported in ailia DX Insight 1.5.0. Please enable the proxy from the OS settings when using that version.</p>
 <h2 id="configuration-on-windows">Configuration on Windows</h2>
-<p>On Windows, the proxy address is detected from the Windows Settings, and whether the proxy is enabled or disabled is detected from netsh.<br>
+<p>When using the OS proxy settings on Windows, the proxy address is detected from the Windows Settings, and whether the proxy is enabled or disabled is detected from netsh.<br>
 Therefore, you need to enable the proxy in both the Windows Settings and netsh.</p>
 <h3 id="how-to-enable-the-proxy">How to enable the proxy</h3>
 <ol>
@@ -945,7 +959,7 @@ Since proxy settings are stored per network service (interface), please configur
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"<img src='img_icons/settings.png'>Proxy Settings","level":"5.1.2","depth":2,"next":{"title":"<img src='img_icons/book_4_spark.png'>RAG","level":"5.1.3","depth":2,"path":"RAG.md","ref":"RAG.md","articles":[]},"previous":{"title":"<img src='img_icons/tune.png'>Recommended LLM","level":"5.1.1.5","depth":3,"path":"CustomLLM_Recomend.md","ref":"CustomLLM_Recomend.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","hide-published-with","custom-favicon"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"img/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ailia DX Insight","language":"en","gitbook":"*"},"file":{"path":"Proxy.md","mtime":"2026-07-23T01:55:30.877Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2026-07-23T01:55:42.253Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"<img src='img_icons/settings.png'>Proxy Settings","level":"5.1.2","depth":2,"next":{"title":"<img src='img_icons/book_4_spark.png'>RAG","level":"5.1.3","depth":2,"path":"RAG.md","ref":"RAG.md","articles":[]},"previous":{"title":"<img src='img_icons/tune.png'>Recommended LLM","level":"5.1.1.5","depth":3,"path":"CustomLLM_Recomend.md","ref":"CustomLLM_Recomend.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","hide-published-with","custom-favicon"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"img/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ailia DX Insight","language":"en","gitbook":"*"},"file":{"path":"Proxy.md","mtime":"2026-10-06T04:53:29.466Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2026-10-06T04:57:31.032Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

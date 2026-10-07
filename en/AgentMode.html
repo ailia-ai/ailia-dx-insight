@@ -123,7 +123,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="v1_5update.html">
+        <li class="chapter " data-level="1.4" data-path="v1_5_1update.html">
+
+                <a href="v1_5_1update.html">
+
+
+                    <img src='img_icons/newspaper.png'>v1.5.1 release note
+
+                </a>
+
+
+
+        </li>
+
+        <li class="chapter " data-level="1.5" data-path="v1_5update.html">
             
                 <a href="v1_5update.html">
             
@@ -136,7 +149,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="v1_4update.html">
+        <li class="chapter " data-level="1.6" data-path="v1_4update.html">
             
                 <a href="v1_4update.html">
             
@@ -149,7 +162,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="v1_3update.html">
+        <li class="chapter " data-level="1.7" data-path="v1_3update.html">
             
                 <a href="v1_3update.html">
             
@@ -162,7 +175,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="v1_2update.html">
+        <li class="chapter " data-level="1.8" data-path="v1_2update.html">
             
                 <a href="v1_2update.html">
             
@@ -175,7 +188,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="v1_1update.html">
+        <li class="chapter " data-level="1.9" data-path="v1_1update.html">
             
                 <a href="v1_1update.html">
             
@@ -913,6 +926,19 @@ It cannot be used with Azure, OpenRouter, or local LLMs other than Gemma4.<br></
 <p><strong>Allowed fetch URLs</strong> : To link with external cloud repositories such as GitHub and allow the AI agent to sync/retrieve (Fetch) data, register the target repository URL here.</p>
 <p><strong>Blocked fetch URLs</strong> : If there are URLs you want to prevent the AI agent from fetching, register the target repository URLs here.
 <br></p>
+<h2 id="adding-an-mcp-server">Adding an MCP Server</h2>
+<p>You can add an MCP server from the &quot;Agent&quot; section of the settings screen to make its tools available to the AI agent.</p>
+<ol>
+<li>Click the add button in the &quot;MCP Servers&quot; section to open the &quot;Add MCP Server&quot; dialog.</li>
+<li>Enter the following example:<ul>
+<li>Server name: Microsoft Docs</li>
+<li>URL: <a href="https://learn.microsoft.com/api/mcp" target="_blank">https://learn.microsoft.com/api/mcp</a></li>
+</ul>
+</li>
+<li>If the server requires custom headers, enter one <code>Name: Value</code> pair per line in &quot;Custom Headers&quot;. Leave this field blank for this example.</li>
+<li>To confirm each tool execution, select &quot;Show confirmation dialog for each execution&quot;.</li>
+<li>Click &quot;Save&quot;. The app connects to the server when you save it. You can enable or disable its tools from the edit screen after connecting.</li>
+</ol>
 <h4 id="next ＞"><a href="DocumentFile.html">Next ＞</a></h4>
 <h4 id="back-to-index"><a href="UseAI.html">Back to Index</a></h4>
 
@@ -958,7 +984,7 @@ It cannot be used with Azure, OpenRouter, or local LLMs other than Gemma4.<br></
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"<img src='img_icons/robot.png'>Using the AI Agent","level":"3.1.2","depth":2,"next":{"title":"<img src='img_icons/forum.png'>Ask Questions About Document Files","level":"3.1.3","depth":2,"path":"DocumentFile.md","ref":"DocumentFile.md","articles":[]},"previous":{"title":"<img src='img_icons/forum.png'>Ask AI Questions","level":"3.1.1","depth":2,"path":"AskToAI.md","ref":"AskToAI.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","hide-published-with","custom-favicon"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"img/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ailia DX Insight","language":"en","gitbook":"*"},"file":{"path":"AgentMode.md","mtime":"2026-07-23T01:32:01.541Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2026-07-23T01:55:42.253Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"<img src='img_icons/robot.png'>Using the AI Agent","level":"3.1.2","depth":2,"next":{"title":"<img src='img_icons/forum.png'>Ask Questions About Document Files","level":"3.1.3","depth":2,"path":"DocumentFile.md","ref":"DocumentFile.md","articles":[]},"previous":{"title":"<img src='img_icons/forum.png'>Ask AI Questions","level":"3.1.1","depth":2,"path":"AskToAI.md","ref":"AskToAI.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","hide-published-with","custom-favicon"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"img/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ailia DX Insight","language":"en","gitbook":"*"},"file":{"path":"AgentMode.md","mtime":"2026-10-06T02:28:29.177Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2026-10-06T04:57:31.032Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
