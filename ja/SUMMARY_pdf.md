@@ -32,6 +32,7 @@
 * [Ollamaを使用したカスタムLLM構築](CustomLLM_Ollama.md)
 * [FastChatを使用したカスタムLLM構築](CustomLLM_FastChat.md)
 * [弊社推奨LLM](CustomLLM_Recomend.md)
+* [プロキシの設定](Proxy.md)
 * [RAGによる回答精度の向上](RAG.md)
 * [エンベディングについて](Embedding.md)
 * [Azure OpenAI Service](AzureOpenAI.md)
