@@ -9,7 +9,6 @@
 * [主な操作方法](MainOperation.md)
 * [ファイルビューの操作](FileView.md)
 * [ファイルをインデックスに登録する](IndexRegister.md)
-* [コンフィグファイルを作成する](ConfigFile.md)
 ---
 * [AIを使う](UseAI.md)
 * [AIに質問する](AskToAI.md)
