@@ -884,33 +884,35 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="proxy-settings">Proxy Settings</h1>
-<p>This page explains how to configure ailia DX Insight when using it in a proxy environment.<br>
-Starting with ailia DX Insight 1.5.1, you can configure the proxy using the <code>http_proxy</code> / <code>https_proxy</code> environment variables in addition to the OS settings.<br>
-These environment variables are not supported in ailia DX Insight 1.5.0. Please enable the proxy from the OS settings when using that version.</p>
+<p>This page explains how to configure ailia DX Insight when using it in a proxy environment.</p>
 <h2 id="configuration-on-windows">Configuration on Windows</h2>
-<p>When using the OS proxy settings on Windows, the proxy address is detected from the Windows Settings, and whether the proxy is enabled or disabled is detected from netsh.<br>
-Therefore, you need to enable the proxy in both the Windows Settings and netsh.</p>
 <h3 id="how-to-enable-the-proxy">How to enable the proxy</h3>
 <ol>
-<li><p>In Windows Settings, go to &quot;Network &amp; internet &gt; Proxy&quot;, turn on &quot;Use a proxy server&quot;, and set the proxy IP address and port.<br>
-<img src="img/Proxy_01.png" alt="Proxy_01"><br></p>
-</li>
-<li><p>From an administrator PowerShell console, import the proxy settings to enable them.</p>
+<li>In Windows Settings, go to &quot;Network &amp; internet &gt; Proxy&quot;, turn on &quot;Use a proxy server&quot;, and set the proxy IP address and port.<br>
+<img src="img/Proxy_01.png" alt="Proxy_01"><br></li>
+</ol>
+<p>In ailia DX Insight 1.5.1 and later, the Windows Settings are all you need.</p>
+<h3 id="how-to-disable-the-proxy">How to disable the proxy</h3>
+<ol>
+<li>In Windows Settings, go to &quot;Network &amp; internet &gt; Proxy&quot; and turn off &quot;Use a proxy server&quot;.</li>
+</ol>
+<h3 id="configuration-with-environment-variables">Configuration with environment variables</h3>
+<p>Starting with ailia DX Insight 1.5.1, you can also configure the proxy using the <code>http_proxy</code> / <code>https_proxy</code> environment variables in addition to the Windows Settings.<br>
+For example, set the user environment variables from a Command Prompt with the following commands (change the address and port to match your environment). Restart ailia DX Insight after setting them.</p>
+<pre><code>setx http_proxy http://proxy.example.com:8080
+setx https_proxy http://proxy.example.com:8080
+</code></pre><p>These environment variables are not supported in ailia DX Insight 1.5.0.</p>
+<h3 id="for-ailia-dx-insight-150">For ailia DX Insight 1.5.0</h3>
+<p>In ailia DX Insight 1.5.0, the proxy address is detected from the Windows Settings, and whether the proxy is enabled or disabled is detected from netsh.<br>
+Therefore, in addition to the Windows Settings above, you also need to enable or disable the proxy with netsh.</p>
+<p>To enable the proxy, after configuring the Windows Settings, import the proxy settings from an administrator PowerShell console.</p>
 <pre><code>netsh winhttp import proxy source=ie
 </code></pre><p>You can check the current WinHTTP proxy settings with the following command.</p>
 <pre><code>netsh winhttp show proxy
 </code></pre><p><img src="img/Proxy_02.png" alt="Proxy_02"><br></p>
-</li>
-</ol>
-<h3 id="how-to-disable-the-proxy">How to disable the proxy</h3>
-<ol>
-<li><p>In Windows Settings, go to &quot;Network &amp; internet &gt; Proxy&quot; and turn off &quot;Use a proxy server&quot;.</p>
-</li>
-<li><p>From an administrator PowerShell console, disable the proxy.</p>
+<p>To disable the proxy, after configuring the Windows Settings, reset the proxy from an administrator PowerShell console.</p>
 <pre><code>netsh winhttp reset proxy
-</code></pre></li>
-</ol>
-<h2 id="configuration-on-macos">Configuration on macOS</h2>
+</code></pre><h2 id="configuration-on-macos">Configuration on macOS</h2>
 <p>On macOS, go to &quot;System Settings &gt; Network &gt; (your active Wi-Fi/Ethernet) &gt; Details &gt; Proxies&quot;, turn on &quot;Web proxy (HTTP)&quot;, and set the proxy server and port.<br>
 Since proxy settings are stored per network service (interface), please configure them for the currently active connection.<br>
 <img src="img/Proxy_03.png" alt="Proxy_03"><br></p>
@@ -959,7 +961,7 @@ Since proxy settings are stored per network service (interface), please configur
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"<img src='img_icons/settings.png'>Proxy Settings","level":"5.1.2","depth":2,"next":{"title":"<img src='img_icons/book_4_spark.png'>RAG","level":"5.1.3","depth":2,"path":"RAG.md","ref":"RAG.md","articles":[]},"previous":{"title":"<img src='img_icons/tune.png'>Recommended LLM","level":"5.1.1.5","depth":3,"path":"CustomLLM_Recomend.md","ref":"CustomLLM_Recomend.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","hide-published-with","custom-favicon"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"img/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ailia DX Insight","language":"en","gitbook":"*"},"file":{"path":"Proxy.md","mtime":"2026-10-07T01:43:08.680Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2026-10-22T04:38:30.535Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"<img src='img_icons/settings.png'>Proxy Settings","level":"5.1.2","depth":2,"next":{"title":"<img src='img_icons/book_4_spark.png'>RAG","level":"5.1.3","depth":2,"path":"RAG.md","ref":"RAG.md","articles":[]},"previous":{"title":"<img src='img_icons/tune.png'>Recommended LLM","level":"5.1.1.5","depth":3,"path":"CustomLLM_Recomend.md","ref":"CustomLLM_Recomend.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","hide-published-with","custom-favicon"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"img/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ailia DX Insight","language":"en","gitbook":"*"},"file":{"path":"Proxy.md","mtime":"2026-10-29T22:58:34.369Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2026-10-29T23:01:16.290Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
